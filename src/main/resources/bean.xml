@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置User对象创建 -->
+    <bean id="user" class="com.startarget.User"></bean>
+
+    <bean id="book" class="com.startarget.Book">
+        <property name="bookName" value="书名"/>
+        <property name="bookAuthor" value="作者"/>
+    </bean>
+
+    <bean id="orders" class="com.startarget.Orders">
+        <constructor-arg name="orderName" value="订单"></constructor-arg>
+        <constructor-arg name="address" value="地址"></constructor-arg>
+    </bean>
+
+    <bean id="student" class="com.startarget.Student" p:id="1" p:name="小明">
+    </bean>
+
+    <!-- 空值，对象，集合 -->
+</beans>
